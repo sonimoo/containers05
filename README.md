@@ -140,7 +140,7 @@ max_execution_time = 120
 
 Открываю файл `files/mariadb/50-server.cnf`, нахожу строку `#log_error = /var/log/mysql/error.log` и раскомментирую её.
 
-[image](img/50%20server%20cnf.jpg)
+![image](img/50%20server%20cnf.jpg)
 
 Сохраняю файл и закрываю.
 
@@ -244,6 +244,7 @@ CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.con
 Проверяю файлы `WordPress` в контейнере
 
 `docker exec -it apache2-php-mariadb ls /var/www/html/`
+
 ✅ Должен быть index.php и другие файлы WordPress.
 
 ![image](img/docker%20exec.jpg)
